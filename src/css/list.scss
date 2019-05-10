@@ -1,0 +1,150 @@
+    @import "module/base.scss";
+    @import "module/header.scss";
+    @import "module/aside.scss";
+    @import "module/footer.scss";
+    main {
+        width: 100%;
+        position: relative;
+        &:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .list-container {
+            width: 1200px;
+            margin: 40px auto;
+            #list-text {
+                float: left;
+                width: 288px;
+                font-size: 20px;
+                text-align: center;
+                h3 {
+                    width: 288px;
+                    height: 50px;
+                    font-family: 微软雅黑;
+                    font-weight: 400;
+                    line-height: 50px;
+                    color: #fff;
+                    background: url(/imgs/list-bg.png) no-repeat center center;
+                }
+                #products-kinds {
+                    position: relative;
+                    li {
+                        height: 50px;
+                        width: 288px;
+                        border-bottom: 1px solid #ededed;
+                        line-height: 50px;
+                        a {
+                            color: #878787;
+                        }
+                        span {
+                            position: absolute;
+                            color: #878787;
+                            right: 10px;
+                        }
+                        .hoverac {
+                            background: #f8f8f8;
+                        }
+                        &:hover {
+                            background: #f8f8f8;
+                            span {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+            #list-picture {
+                width: 900px;
+                float: right;
+                h4 {
+                    font-weight: 400;
+                    line-height: 50px;
+                    font-size: 20px;
+                    width: 900px;
+                    height: 58px;
+                    line-height: 58px;
+                    padding-left: 15px;
+                    border-bottom: 1px solid #dbdbdb;
+                }
+                #pictures-products {
+                    width: 860px;
+                    margin: 10px 20px 0 20px;
+                    ul {
+                        position: relative;
+                        li {
+                            width: 25%;
+                            margin-top: 20px;
+                            margin-bottom: 20px;
+                            overflow: hidden;
+                            float: left;
+                            .pic {
+                                margin: 0 20px 10px 0;
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                            .pic-attr {
+                                margin-right: 20px;
+                                position: relative;
+                                span {
+                                    font-size: 16px;
+                                    color: #e30000;
+                                    padding-left: 5px;
+                                }
+                                em {
+                                    display: inline-block;
+                                    width: 30px;
+                                    height: 30px;
+                                    position: absolute;
+                                    right: 0;
+                                    top: -8px;
+                                    background: url(/imgs/list_shopcar_icon.png) no-repeat;
+                                    cursor: pointer;
+                                }
+                                p {
+                                    font-size: 14px;
+                                    font-family: 微软雅黑;
+                                    line-height: 24px;
+                                    height: 24px;
+                                    a {
+                                        color: #333;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .list-page {
+                width: 900px;
+                float: right;
+                text-align: center;
+                font-size: 14px;
+                ul {
+                    display: flex;
+                    justify-content: center;
+                    margin: 20px 0 100px;
+                    li {
+                        float: left;
+                        margin-left: 5px;
+                        border: 1px solid #c7c7c7;
+                        padding: 5px 10px;
+                        font: 400 12px/1 'Microsoft Yahei';
+                        vertical-align: top;
+                        a {
+                            color: #888;
+                        }
+                    }
+                    .pageac {
+                        background: #83c920;
+                        border: none;
+                        a {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }

@@ -1,0 +1,17 @@
+.sidebar_Mo .user_login h2{background:#f9f9f9;}
+.sidebar_Mo .color_1 ,.sidebar_Mo .color_2 ,.sidebar_Mo .color_3 , .sidebar_Mo .color_4 ,.sidebar_Mo .color_5 ,.sidebar_Mo .color_6 .sidebar_Mo .color_7 ,.sidebar_Mo .color_8{color:#FFF;}
+.shop_tab ul li{ border:0;}
+.sidebar_Mo .shop_tab{ /*background-color:initial;*/}
+.tel_tab_bg .tel_phone{background:url('/images/shop_online2016/phone.png') no-repeat left center;display: block;
+width: 169px;
+height: 42px;
+margin: 0 auto;
+/*border-bottom: 1px dashed #636363;*/
+text-align: center;
+text-align: left;
+padding-left: 33px;}
+.server_info{ width:202px; text-align: left; overflow:hidden;/*border-bottom: 1px dashed #636363;*/padding-bottom:8px;}
+.server_info a{ display:inline-block; vertical-align: middle; width:99px; height:27px;background:url('/images/shop_online2016/qq_img.png') no-repeat left top; margin-top:7px;}
+.server_info a:hover{background:url('/images/shop_online2016/qq_img.png') no-repeat left bottom;}
+.sidebar_Mo .coll_tab_bg{ background-color:666}
+.sidebar_Mo .shop_tab .tel_tab_bg{ height:96px; line-height:normal; text-align:left}

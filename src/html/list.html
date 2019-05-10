@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>新鲜水果商城-商品列表页</title>
+    <link rel="stylesheet" href="/css/list.css">
+</head>
+
+<body>
+    <header></header>
+    <aside></aside>
+    <main>
+        <div class="list-container">
+            <div id="list-text">
+                <h3>产品展示</h3>
+                <ul id="products-kinds">
+                    <li><a href="javascript:;">进口水果</a><span>&gt</span></li>
+                    <li><a href="javascript:;">国产水果</a><span>&gt</span></li>
+                    <li><a href="javascript:;">热带水果</a><span>&gt</span></li>
+                    <li><a href="javascript:;">水果饮品</a><span>&gt</span></li>
+                </ul>
+            </div>
+            <div id="list-picture">
+                <h4>产品展示</h4>
+                <div id="pictures-products">
+                    <script type="text/html" id="list-template">
+                        <ul>
+                            {{each list item}}
+                            <li>
+                                <div class="pic">
+                                    <a href="/html/detail.html?id={{item.id}}"><img src={{item.imgs}} alt=""></a>
+                                </div>
+                                <div class="pic-attr">
+                                    <span class="pic-price">￥{{item.price}}</span>
+                                    <em class="list-shopcar"></em>
+                                    <p class="pic-title"><a href="/html/detail.html?id={{item.id}}">{{item.title}}</a></p>
+                                </div>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </script>
+                </div>
+            </div>
+            <div class="list-page">
+                <ul>
+                    <li class="total-page">总共<span>3</span>页</li>
+                    <li><a href="javascript:;">首页</a></li>
+                    <li><a href="javascript:;">上一页</a></li>
+                    <li class="pageac"><a href="javascript:;">1</a></li>
+                    <li class="pageac"><a href="javascript:;">2</a></li>
+                    <li class="pageac"><a href="javascript:;">3</a></li>
+                    <li class="pageac"><a href="javascript:;">下一页</a></li>
+                    <li class="pageac"><a href="javascript:;">尾页</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer id="footer"></footer>
+    <script src="/libs/requirejs/require.js" data-main="/js/list.js"></script>
+</body>
+
+</html>

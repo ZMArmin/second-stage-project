@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header></header>
+    <!-- 登录页面主要内容 -->
+    <main>
+        <div class="login-container">
+            <h5><a href="javascript:;">会员登录</a></h5>
+            <div class="form-wrap">
+
+                <div class="form-title">
+
+                </div>
+                <div class="f-name">会员登录</div>
+                <form>
+                    <div class="username-div">
+                        <span class="username-icon"></span>
+                        <input type="text" id="usernameInput" placeholder="请输入用户名">
+                    </div>
+                    <div class="password-div"><span class="password-icon"></span><input type="text" id="passwordInput" placeholder="请输入密码"></div>
+                    <div class="sure-wrap">
+                        <div class="sure-div">
+                            <span class="sure-icon"></span>
+                            <input type="text" id="sureWord" placeholder="验证码">
+                        </div>
+
+                        <img src="/imgs/weixin.png" alt="">
+                    </div>
+
+                    <label for="#remember">十天免登陆： <input id="remember" type="checkbox"></label>
+
+
+                    <button id="login-btn">登录</button>
+
+
+                </form>
+            </div>
+            <div class="form-right">
+                <dl>
+                    <dt>还不是会员</dt>
+                    <dd><a href="/html/register.html">请先注册</a></dd>
+                </dl>
+            </div>
+        </div>
+    </main>
+    <footer id="footer"></footer>
+    <script src="/libs/requirejs/require.js" data-main="/js/login"></script>
+</body>
+
+</html>

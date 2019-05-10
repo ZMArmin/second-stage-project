@@ -1,0 +1,191 @@
+@import "module/base.scss";
+@import "module/aside.scss";
+@import "module/header.scss";
+@import "module/footer.scss";
+main {
+    width: 100%;
+    position: relative;
+    .products-container {
+        width: 1200px;
+        margin: 40px auto;
+        .import-container {
+            width: 1200px;
+            height: 460px;
+            .import-title {
+                width: 236px;
+                height: 460px;
+                float: left;
+                text-align: center;
+                h2 {
+                    width: 236px;
+                    height: 50px;
+                    line-height: 50px;
+                    background: #333333;
+                    border-top-left-radius: 5px;
+                    a {
+                        color: #fff;
+                    }
+                }
+                .picture {
+                    width: 236px;
+                    height: 400px;
+                    margin-top: 10px;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+            .import-fruits {
+                width: 709px;
+                height: 469px;
+                float: left;
+                margin-left: 10px;
+                ul {
+                    width: 709px;
+                    height: 469px;
+                    font-size: 12px;
+                    li {
+                        float: left;
+                        width: 25%;
+                        height: 50%;
+                        &:after {
+                            content: "";
+                            display: block;
+                            clear: both;
+                        }
+                        .img-container {
+                            width: 170px;
+                            height: 169px;
+                            overflow: hidden;
+                        }
+                        &:hover {
+                            img {
+                                transform: scale(1.1);
+                                transition: 0.5s;
+                            }
+                        }
+                        .fruits-inner {
+                            margin-right: 10px;
+                            text-align: center;
+                            >a {
+                                display: block;
+                                border: 1px dashed #f8f8f8;
+                                margin-bottom: 10px;
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                            a {
+                                color: #333;
+                            }
+                            #fruits-price {
+                                line-height: 16px;
+                                font-size: 16px;
+                                color: red;
+                                display: inline-block;
+                                margin-bottom: 5px;
+                            }
+                            h3 {
+                                line-height: 18px;
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                }
+            }
+            .import-right {
+                width: 234px;
+                height: 460px;
+                float: right;
+                background: #f6f5f4;
+                #fruits-names {
+                    width: 234px;
+                    height: 251px;
+                    display: flex;
+                    font-size: 12px;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                    align-content: space-around;
+                    li {
+                        width: 102px;
+                        height: 50px;
+                        background: #fff;
+                        text-align: center;
+                        line-height: 50px;
+                        a {
+                            color: black;
+                            cursor: pointer;
+                        }
+                    }
+                    .image {
+                        display: inline-block;
+                        width: 234px;
+                        height: 211px;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .news-container {
+        width: 100%;
+        background: #f6f6f6;
+        .news {
+            width: 1200px;
+            height: 676px;
+            margin: 20px auto;
+            position: relative;
+            .news-left {
+                left: 0;
+                width: 389px;
+                height: 558px;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+            }
+            .news-right {
+                width: 738px;
+                height: 558px;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                right: 0;
+            }
+            h2 {
+                font-weight: 400;
+                font-size: 30px;
+            }
+            #English {
+                color: #000;
+            }
+            #chinese {
+                color: red;
+            }
+            ol {
+                overflow: hidden;
+                li {
+                    width: 100%;
+                    height: 50px;
+                    border-bottom: 1px dashed #ebebeb;
+                    font-family: 微软雅黑;
+                    font-size: 15px;
+                    line-height: 66px;
+                    span {
+                        float: right;
+                        color: #868686;
+                    }
+                    a {
+                        color: #373737;
+                    }
+                }
+            }
+        }
+    }
+}

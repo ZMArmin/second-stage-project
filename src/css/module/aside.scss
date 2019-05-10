@@ -1,0 +1,111 @@
+aside {
+    position: fixed;
+    height: 100%;
+    right: -280px;
+    top: 0;
+    z-index: 10;
+    .aside-container {
+        height: 100%;
+        .aside-list {
+            width: 35px;
+            height: 100%;
+            text-align: center;
+            color: #444;
+            position: relative;
+            height: 100%;
+            background: #1ba70f;
+            float: right;
+            ul {
+                overflow: hidden;
+                line-height: 22px;
+                font-size: 12px;
+                .aside-icon {
+                    width: 35px;
+                    height: 35px;
+                    margin-bottom: 10px;
+                    line-height: 35px;
+                    position: relative;
+                    .hover-text {
+                        display: none;
+                        right: 60px;
+                        opacity: 0;
+                        display: inline-block;
+                        opacity: 1;
+                        top: 0;
+                        position: absolute;
+                        font-size: 14px;
+                        height: 35px;
+                        width: 100px;
+                        right: 35px;
+                        line-height: 35px;
+                        color: #fff;
+                        background: #484848;
+                        z-index: 10000;
+                    }
+                }
+                #servers {
+                    margin: 90px 0 20px;
+                    position: relative;
+                    background: #f1c719;
+                }
+                #shopCar {
+                    padding: 22px 6px 0;
+                    margin-bottom: 10px;
+                    color: #fff;
+                    border: {
+                        top: 1px solid #fff;
+                        bottom: 1px solid #fff;
+                    }
+                    .car-text {
+                        display: block;
+                        background: url(/imgs/shop_icon.png) no-repeat center top;
+                        padding: 22px 6px 0;
+                        line-height: 22px;
+                        font-size: 12px;
+                    }
+                    #shop-num {
+                        color: orangered;
+                    }
+                }
+                #return-top {
+                    width: 35px;
+                    height: 35px;
+                    position: absolute;
+                    bottom: 5px;
+                    line-height: 35px;
+                    text-align: center;
+                }
+                li {
+                    position: relative;
+                    z-index: 10000;
+                    .ac {
+                        background: #f1c719;
+                    }
+                    &:hover {
+                        background: #f1c719;
+                        .hover-text {
+                            display: inline-block;
+                            opacity: 1;
+                            top: 0;
+                            position: absolute;
+                            font-size: 14px;
+                            height: 35px;
+                            width: 100px;
+                            right: 35px;
+                            line-height: 35px;
+                            color: #fff;
+                            background: #484848;
+                            z-index: 10000;
+                        }
+                    }
+                }
+            }
+        }
+        .aside-center {
+            width: 280px;
+            height: 100%;
+            float: right;
+            position: relative;
+        }
+    }
+}

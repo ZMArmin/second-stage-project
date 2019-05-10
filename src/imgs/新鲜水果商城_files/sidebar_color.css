@@ -1,0 +1,89 @@
+/*侧栏设置*/
+/*背景*/
+.sidebar_Mo .sidebar_list{background:#1BA70E;}
+.sidebar_Mo .side_server .server_icon{background: #F1C719;}
+/*购物车*/
+.sidebar_Mo .sidebar_list li.cur .shop_text{background-image: url('images/shop_icon_h.png');}
+.sidebar_Mo .sidebar_list li:hover .shop_text{background-image: url('images/shop_icon_h.png');}
+.sidebar_Mo .shop_num{border-color:#63C252; color:#fff;}
+.sidebar_Mo .shop_num .shop_val{color:#F1C719;}
+.sidebar_Mo .shop_num .shop_text{ background-image: url('images/shop_icon.png');}
+.sidebar_Mo .sidebar_list li.cur .shop_val{color:#fff;}
+/*鼠标经过图标*/
+.sidebar_Mo .sidebar_list li.cur{background:#F1C719;}
+.sidebar_Mo .sidebar_list li:hover{background:#F1C719;}
+.sidebar_Mo .sidebar_list li:hover .shop_val{color:#fff;}
+/*鼠标经过内容*/
+.sidebar_Mo .hover_text{background:#484848; color:#fff;}
+.sidebar_Mo .hover_text em.jiao{border-color:transparent transparent transparent #484848;}
+/*用户登录边框*/
+.sidebar_Mo .user_login{border-color:#E4E4E4;}
+.sidebar_Mo .user_login h2{background:#FAFAFA;}
+.sidebar_Mo .user_login em.jiao{border-color:transparent transparent transparent #FAFAFA;}
+.sidebar_Mo .input_name,.sidebar_Mo .input_pwd{border-color:#D0D0D0;}
+.sidebar_Mo .input_name label,.sidebar_Mo .input_pwd label{background:#E5E4DF;}
+.sidebar_Mo .register_btn a{color:#333;}
+.sidebar_Mo .login_btn a{background-color:#1BA70E; color:#fff;}
+.sidebar_Mo .login_url .qq_url{border-color:#1C97D4; color:#1C97D4;}
+.sidebar_Mo .login_url .wx_url{border-color:#36B52C; color:#36B52C;}
+/*二维码*/
+.sidebar_Mo .QR_text{background: #189F0C;}
+.sidebar_Mo .QR_text p{color:#fff;}
+.sidebar_Mo .QR_text em.jiao{border-color:transparent transparent transparent #189F0C;}
+/*侧栏内容设置*/
+.sidebar_Mo .Fcolor{color:#fff;}
+.sidebar_Mo .color_3{color:#333;}
+.sidebar_Mo .server_list,.sidebar_Mo .user_list,.sidebar_Mo .coll_list,.sidebar_Mo .assets_list,.sidebar_Mo .alt_list{background:#189F0C;}
+.sidebar_Mo .shop_list{background:#189F0C;}
+.sidebar_Mo .side_Ctit{background:#1CB411;}
+.sidebar_Mo .shop_Ctit{background:#FF721A;}
+.sidebar_Mo .tel_tab .tel_tab_l,.sidebar_Mo .tel_tab .tel_tab_r{background-image:url('images/list1_bg.png');}
+.sidebar_Mo .tel_tab em.jiao{border-color:transparent transparent #0E7D04 transparent;}
+.sidebar_Mo .server_c dl{border-bottom-color:#44AA30;}
+.sidebar_Mo .server_c dl dd{color:#fff;}
+.sidebar_Mo .tel_tab_bg{background:#0E7D04;}
+.sidebar_Mo .weibo_list{border-bottom-color:#44AA30;}
+.sidebar_Mo .weibo_list li .weibo_text h2{color:#fff;}
+.sidebar_Mo .weibo_list li .weibo_text a{background:#DFDFDF;}
+.sidebar_Mo .QR_code_text{color:#fff;}
+.sidebar_Mo .shop_tab{/*background:#fff;*/;}
+.sidebar_Mo .shop_tab ul li{border-bottom-color:#EBEAE8;}
+.sidebar_Mo .js_text p font{color:#f00;}
+.sidebar_Mo .js_text a{background:url('images/btn5.png');}
+.sidebar_Mo .js_text a em{color:#fff;}
+.sidebar_Mo .user_tit .pic{border-color:#fff;}
+.sidebar_Mo .user_tit .user_tit_info p{color:#fff;}
+.sidebar_Mo .user_tit .user_tit_info em{color:#c9c9c9;}
+.sidebar_Mo .user_tit .user_tit_info a{color:#fff; background: url('images/btn4.png');}
+.sidebar_Mo .user_info dt{color:#fff; border-bottom-color:#4CB138;}
+.sidebar_Mo .user_info dd{color:#fff; border-bottom-color:#4CB138;}
+.sidebar_Mo .bottom_btn a{color:#fff; background:url('images/btn5.png');}
+.sidebar_Mo .bottom_btn2 a{color:#fff; background:url('images/btn5.png');}
+.sidebar_Mo .coll_tab .coll_tab_l,.sidebar_Mo .coll_tab .coll_tab_r{background-image:url('images/list2_bg.png');}
+.sidebar_Mo .coll_tab_bg{background:#0C6B00;}
+.sidebar_Mo .coll_tab_bg .product_text p a{color:#ededed;}
+.sidebar_Mo .coll_tab_bg .product_text em{color:#fff;}
+.sidebar_Mo .coll_tab .coll_tab_l2,.sidebar_Mo .coll_tab .coll_tab_r2{background-image:url('images/list3_bg.png');}
+.sidebar_Mo .coll_tab_bg2{background:#0C6B00; color:#fff;}
+.sidebar_Mo .coll_tab_bg2 a{color:#fff;}
+.sidebar_Mo .no_pro_text{color:#ccc;}
+.sidebar_Mo .bottom_c{border-bottom-color: #31AA1F;}
+.sidebar_Mo .assets_c_list li{background:#0C6B00;}
+.sidebar_Mo .assets_c_list li em{color:#fff;}
+.sidebar_Mo .assets_c_list li p{color:#ccc;}
+.sidebar_Mo .alt_tab_bg{background:#F4F4F4;}
+.sidebar_Mo .alt_tab_bg .comment_text{color:#333;}
+.sidebar_Mo .alt_tab_bg .comment_text b{color:#c40000;}
+.sidebar_Mo .alt_tab_bg .comment_date{color:#999;}
+.sidebar_Mo .alt_tab_bg em.jiao{border-color:#F4F4F4 transparent transparent transparent;}
+.sidebar_Mo .more_btn a{color:#fff; background:url('images/btn5.png');}
+
+
+
+
+
+
+
+
+
+

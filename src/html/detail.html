@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/detail.css">
+</head>
+
+<body>
+    <header></header>
+    <aside></aside>
+    <main>
+
+
+        <div class="detaile-container">
+            <!-- detail-wrap容器盒子 -->
+            <div id="detaile-wrap"></div>
+            <script type="text/html" id="detail-template">
+                <p>
+                    <a href="/">首页</a><em>&nbsp;&nbsp;&gt;&gt</em>
+                    <a href="/html/list.html">产品展示</a><em>&nbsp;&nbsp;&gt;&gt</em>
+                    <a href="/html/list.html">水果饮品</a><em>&nbsp;&nbsp;&gt;&gt</em>
+                    <span id="fruit-name">{{data.title}}</span>
+                </p>
+                <div class="detail-list">
+                    <h3>产品展示</h3>
+                    <ul class="products-lists">
+                        <li><a href="javascript:;">进口水果</a><span>&gt</span></li>
+                        <li><a href="javascript:;">国产水果</a><span>&gt</span></li>
+                        <li><a href="javascript:;">热带水果</a><span>&gt</span></li>
+                        <li><a href="javascript:;">水果饮品</a><span>&gt</span></li>
+                    </ul>
+                </div>
+                <div class="describe-container">
+                    <h4>详细说明</h4>
+                    <div class="describe-conten">
+                        <div class="pic-wrap">
+                            <div class="pic">
+                                <img src="{{data.imgs[0]}}" alt="">
+                            </div>
+                            <div class="small-pic">
+                                <span class="move-btn" id="go-pre"></span>
+                                <span class="move-btn" id="go-next"></span>
+                                <div class="s-pics">
+                                    <ul>
+                                        <li><img src="{{data.imgs[1]}}" alt=""></li>
+                                        <li><img src="{{data.imgs[2]}}" alt=""></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="share">
+                                <div class="share-inner">
+                                    <a href="javascript:;" class="share-weixin"></a>
+                                    <a href="javascript:;" class="share-qq"></a>
+                                    <a href="javascript:;" class="share-zone"></a>
+                                    <a href="javascript:;" class="share-weibo"></a>
+                                    <a href="javascript:;" class="share-more"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="discribe-text">
+                            <div id="fru-title">
+                                <h1>{{data.title}}</h1>
+                            </div>
+                            <div id="fru-peice">
+                                <dl>
+                                    <dt>
+                                                  价格
+                                                </dt>
+                                    <dd><span id="attr-price">{{data.price}}</span>&nbsp;元</dd>
+                                </dl>
+                            </div>
+                            <div id="fru-attr">
+                                <ul>
+                                    <li id="num-sale">累计销量<span>&nbsp;0</span></li>
+                                    <span>|</span>
+                                    <li id="eval-sale">累计评价<span>&nbsp;0</span></li>
+                                </ul>
+                            </div>
+                            <div id="about-buy">
+                                <dl>
+                                    <dt>购买数量</dt>
+                                    <dd id="buy-some">
+                                        <input type="text" id="pro-num" value="1">
+                                        <a id="plus" href="javascript:;">-</a>
+                                        <a id="reduce" href="javascript:;">+</a>
+                                    </dd>
+                                    <dd id="total-this">总计&nbsp;&nbsp;<span>45</span></dd>
+                                </dl>
+                            </div>
+                            <div id="buy-btn-wrap">
+                                <div id="buyNow">
+                                    <a href="javascript:;"></a>
+                                </div>
+                                <div id="buyAddCar">
+                                    <a href="javascript:;"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="attrs-this">
+                        <h2>
+                            <a href="javascript:;" class="dis-btn">产品说明</a>
+                            <a href="javascript:;" class="val-btn">所有评价</a>
+                        </h2>
+                        <div id="attrs-discribe">
+                            <ul class="discribes">
+                                {{each data.discrib item}}
+                                <!-- <li>生产许可证编号:&nbsp; SC103442001962
+                                </li> -->
+                                <li>厂名:&nbsp; {{item}}</li>
+                                <!--<li>厂址: 港口镇石特工业区</li>
+                                <li>厂家联系方式: 00000000</li>
+                                <li>配料表: 详见包装</li>
+                                <li>储藏方法: 阴凉干燥</li>
+                                <li>保质期: 365</li>
+                                <li>食品添加剂: 详见包装</li>
+                                <li>净含量: 1680ml</li>
+                                <li>包装方式: 包装</li>
+                                <li>产地: 中国大陆</li>
+                                <li>
+                                    省份: 广东省
+                                </li>
+                                <li>城市: 中山市</li> -->
+                                {{/each}}
+                            </ul>
+                            <ul class="evaluate">
+                                <li class="eva-1">
+                                    <span>与描述相符&nbsp;&nbsp;<font>0</font></span>
+                                    <em></em>
+                                </li>
+                                <li class="eva-2"></li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+                    <div id="relative-products">
+                        <p>相关产品</p>
+                        <div class="relative-pic">
+                            <ul>
+                                {{each data.relative item}}
+                                <li>
+                                    <div class="pic">
+                                        <a href="/html/detail.html?id={{item.id}}"><img src={{item.img}} alt=""></a>
+                                    </div>
+                                    <div class="pic-attr">
+                                        <span class="pic-price">￥{{item.pric}}</span>
+
+                                        <p class="pic-title"><a href="/html/detail.html?id={{item.id}}">{{item.moretitle}}</a></p>
+                                    </div>
+                                </li>
+                                {{/each}}
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+            </script>
+
+
+        </div>
+
+
+    </main>
+    <footer id="footer"></footer>
+    <script src="/libs/requirejs/require.js" data-main="/js/detail"></script>
+</body>
+
+</html>

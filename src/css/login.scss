@@ -1,0 +1,175 @@
+@import "module/base.scss";
+@import "module/header.scss";
+@import "module/footer.scss";
+main {
+    width: 100%;
+    &::before {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+main .login-container {
+    width: 1188px;
+    height: 460px;
+    margin: 20px auto 50px;
+    border: 1px solid #f5f5f5;
+}
+
+main .login-container h5 {
+    font-size: 14px;
+    height: 35px;
+    line-height: 35px;
+    position: relative;
+    padding-left: 18px;
+    border-bottom: 2px solid #357821;
+}
+
+main .login-container h5::before {
+    content: "|";
+    display: inline-block;
+    position: absolute;
+    top: -1px;
+    left: 10px;
+    color: #357821;
+}
+
+main .login-container h5 a {
+    color: #357821;
+}
+
+main .login-container h5 span {
+    color: #357821;
+    padding: 0 5px 0 10px;
+}
+
+.form-wrap {
+    float: left;
+    position: relative;
+    .form-title {
+        border: none;
+        border-top: 1px solid #C6C8C7;
+        margin-top: 60px;
+        margin-left: 5px;
+        width: 400px;
+    }
+    .f-name {
+        width: 140px;
+        height: 40px;
+        border: 1px solid #c6c8c7;
+        border-bottom: none;
+        background: #fff;
+        position: absolute;
+        left: 15px;
+        top: 21px;
+        font-size: 16px;
+        text-align: center;
+        line-height: 40px;
+        box-sizing: border-box;
+        color: #ccc;
+    }
+    form {
+        margin-top: 20px;
+        div {
+            width: 392px;
+            height: 48px;
+            margin-bottom: 20px;
+            margin-left: 10px;
+            line-height: 48px;
+            border: 1px solid #357821;
+            border-radius: 5px;
+            vertical-align: middle;
+            position: relative;
+            input {
+                width: 350px;
+                font-size: 16px;
+                margin: 5px 5px 5px 35px;
+                height: 35px;
+                border: none;
+            }
+            span {
+                position: absolute;
+                width: 30px;
+                height: 20px;
+                left: 2px;
+                top: 14px;
+                background: url(/imgs/login_phone_icon.png) no-repeat;
+            }
+            .username-icon {
+                background-position: 0 0;
+            }
+            .password-icon {
+                background-position: 0 -40px;
+            }
+            .sure-icon {
+                background-position: 0 -20px;
+            }
+        }
+        .sure-wrap {
+            border: none;
+            position: relative;
+            .sure-div {
+                width: 150px;
+                margin-left: -2px;
+                display: inline-block;
+                input {
+                    width: 110px;
+                }
+            }
+            img {
+                width: 115px;
+                height: 28px;
+                background: #357821;
+                margin-left: 20px;
+            }
+        }
+        label {
+            padding-left: 10px;
+        }
+        button {
+            display: block;
+            width: 150px;
+            height: 48px;
+            border: none;
+            background: #357821;
+            margin: 20px 0 20px 10px;
+            border-radius: 5px;
+            font-size: 18px;
+            text-align: center;
+            color: #fff;
+        }
+    }
+}
+
+.form-right {
+    width: 400px;
+    float: right;
+}
+
+.form-right dl {
+    margin-top: 50px;
+}
+
+.form-right dl dt {
+    color: #444;
+    font-size: 18px;
+    line-height: 50px;
+}
+
+.form-right dl dd {
+    display: inline-block;
+    height: 45px;
+    line-height: 45px;
+    font-size: 18px;
+    width: 150px;
+    text-align: center;
+    border-radius: 5px;
+    border-width: 1px;
+    cursor: pointer;
+    background: #357821;
+}
+
+.form-right dl dd a {
+    color: #fff;
+}
