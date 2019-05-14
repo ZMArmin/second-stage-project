@@ -3,7 +3,7 @@ aside {
     height: 100%;
     right: -280px;
     top: 0;
-    z-index: 10;
+    // z-index: 100;
     .aside-container {
         height: 100%;
         .aside-list {
@@ -16,7 +16,6 @@ aside {
             background: #1ba70f;
             float: right;
             ul {
-                overflow: hidden;
                 line-height: 22px;
                 font-size: 12px;
                 .aside-icon {
@@ -25,22 +24,10 @@ aside {
                     margin-bottom: 10px;
                     line-height: 35px;
                     position: relative;
-                    .hover-text {
+                    span {
                         display: none;
                         right: 60px;
                         opacity: 0;
-                        display: inline-block;
-                        opacity: 1;
-                        top: 0;
-                        position: absolute;
-                        font-size: 14px;
-                        height: 35px;
-                        width: 100px;
-                        right: 35px;
-                        line-height: 35px;
-                        color: #fff;
-                        background: #484848;
-                        z-index: 10000;
                     }
                 }
                 #servers {
@@ -52,6 +39,7 @@ aside {
                     padding: 22px 6px 0;
                     margin-bottom: 10px;
                     color: #fff;
+                    position: relative;
                     border: {
                         top: 1px solid #fff;
                         bottom: 1px solid #fff;
@@ -66,6 +54,68 @@ aside {
                     #shop-num {
                         color: orangered;
                     }
+                    #user-login {
+                        position: absolute;
+                        display: none;
+                        top: 0;
+                        right: 35px;
+                        width: 350px;
+                        background: #fff;
+                        border-width: 1px 0 1px 1px;
+                        border-style: solid;
+                        .show {
+                            display: block;
+                        }
+                        h2 {
+                            text-align: left;
+                            font-size: 16px;
+                            height: 50px;
+                            line-height: 50px;
+                            padding: 0 10px;
+                            margin-bottom: 10px;
+                            color: #606060;
+                            background: #f9f9f9;
+                            font {
+                                float: right;
+                            }
+                        }
+                        dl {
+                            dd {
+                                height: 40px;
+                                width: 310px;
+                                margin: 0 auto;
+                                margin-bottom: 10px;
+                                line-height: 40px;
+                                overflow: hidden;
+                                color: black;
+                                border: 1px solid #D0D0D0;
+                                input {
+                                    border: none;
+                                    height: 40px;
+                                    line-height: 40px;
+                                    padding: 0 5px;
+                                    width: 258px;
+                                    float: right;
+                                    border-left: 1px solid #D0D0D0;
+                                }
+                                button {
+                                    margin: 0 auto;
+                                    width: 310px;
+                                    height: 45px;
+                                    line-height: 45px;
+                                    background-color: #1BA70E;
+                                    color: #fff;
+                                    border: none;
+                                }
+                            }
+                            dd:nth-child(3) {
+                                border: none;
+                                font-size: 16px;
+                                text-align: right;
+                                padding-right: 40px;
+                            }
+                        }
+                    }
                 }
                 #return-top {
                     width: 35px;
@@ -77,7 +127,7 @@ aside {
                 }
                 li {
                     position: relative;
-                    z-index: 10000;
+                    // z-index: 1000;
                     .ac {
                         background: #f1c719;
                     }
@@ -95,7 +145,8 @@ aside {
                             line-height: 35px;
                             color: #fff;
                             background: #484848;
-                            z-index: 10000;
+                            z-index: 10;
+                            transition-duration: 0.5s;
                         }
                     }
                 }
@@ -106,6 +157,140 @@ aside {
             height: 100%;
             float: right;
             position: relative;
+            background: #189F0C;
+            .shop-list {
+                opacity: 1;
+                margin-top: 0px;
+                z-index: 1;
+                h2 {
+                    position: relative;
+                    height: 50px;
+                    line-height: 60px;
+                    text-align: center;
+                    font-size: 16px;
+                    font-weight: normal;
+                    color: #fff;
+                    a {
+                        position: absolute;
+                        display: inline-block;
+                        width: 15px;
+                        height: 18px;
+                        left: 20px;
+                        top: 4px;
+                    }
+                }
+                .shop-scroll {
+                    width: 269px;
+                    overflow: hidden;
+                    margin: 10px auto;
+                    ul {
+                        height: 370px;
+                        overflow-y: scroll;
+                        overflow-x: hidden;
+                        width: 297px;
+                        li {
+                            height: 96px;
+                            line-height: normal;
+                            text-align: left;
+                            background: #0E7D04;
+                            .shop-tab-pic {
+                                display: block;
+                                margin: 0 10px 0 5px;
+                                width: 70px;
+                                height: 75px;
+                                float: left;
+                                img {
+                                    margin-top: 10px;
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                            .shop-tab-title {
+                                width: 165px;
+                                float: left;
+                                height: 62px;
+                                p {
+                                    color: #EDEDED;
+                                    font-size: 14px;
+                                    height: 18px;
+                                    line-height: 18px;
+                                    word-break: break-all;
+                                    overflow: hidden;
+                                    width: 165px;
+                                }
+                                .price {
+                                    display: block;
+                                    margin-top: 2px;
+                                    width: 165px;
+                                    color: #FFF
+                                }
+                            }
+                            .shop-tab-num {
+                                display: inline-block;
+                                height: 22px;
+                                margin-top: 10px;
+                                em {
+                                    display: block;
+                                    width: 22px;
+                                    height: 22px;
+                                    float: left;
+                                    border: 1px solid #CBCBCB;
+                                    color: #EDEDED;
+                                    text-align: center;
+                                    line-height: 22px;
+                                    font-style: normal;
+                                    cursor: pointer;
+                                }
+                                #num {
+                                    float: left;
+                                    min-width: 40px;
+                                    text-align: center;
+                                    height: 22px;
+                                    line-height: 22px;
+                                    border: 1px solid #CBCBCB;
+                                    border-left: 0;
+                                    border-right: 0;
+                                    color: #CBCBCB;
+                                }
+                            }
+                        }
+                    }
+                    .js-wrap {
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        bottom: 15px;
+                        p {
+                            text-align: right;
+                            font-size: 14px;
+                            width: 248px;
+                            margin: 0 auto 10px;
+                            color: #FFF;
+                            text-align: right;
+                            font {
+                                color: #f00;
+                                font-size: 16px;
+                            }
+                        }
+                        a {
+                            display: block;
+                            background: url(/images/shop_online2016/btn1.png);
+                            width: 248px;
+                            height: 40px;
+                            margin: 0 auto;
+                            line-height: 40px;
+                            text-align: center;
+                            background: #f1c719;
+                            em {
+                                display: inline-block;
+                                padding-right: 25px;
+                                font-size: 16px;
+                                font-style: normal;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>新鲜水果商城-首页</title>
+
     <link rel="stylesheet" href="/css/index.css">
 
 </head>
@@ -32,14 +33,14 @@
                             {{each list item}}
                             <li>
                                 <div class="fruits-inner">
-                                    <a href="javascript:;">
+                                    <a href="/html/detail.html?id={{item.id}}">
                                         <div class="img-container">
-                                            <img src="{{item.img}} " alt=" ">
+                                            <img src="{{item.img}}" alt=" ">
                                         </div>
                                     </a>
                                     <span id="fruits-price">￥{{item.price}}</span>
                                     <h3>
-                                        <a href="javascript:;">{{item.title}}</a>
+                                        <a href="/html/detail.html?id={{item.id}}">{{item.title}}</a>
                                     </h3>
                                 </div>
 

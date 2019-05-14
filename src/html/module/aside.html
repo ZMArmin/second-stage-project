@@ -1,28 +1,89 @@
 <div class="aside-container">
-    <div class="aside-center"></div>
+    <div class="aside-center">
+        <div class="shop-list">
+            <h2 class="shop-sever">
+                <a href="javascript:;" id="roll-up"><img src="/imgs/more_icon.png" alt=""></a>
+                购物车
+            </h2>
+            <!-- 侧边栏购物车 -->
+            <div class="shop-scroll">
+                <ul>
+                    <li class="shop-tab-li">
+                        <span class="shop-tab-pic">
+                            <a href="javascript:;">
+                                <img src="/imgs/1.png" alt="">
+                            </a>
+                        </span>
+                        <div class="shop-tab-title">
+                            <p class="title">油牛果</p>
+                            <span class="price">￥99</span>
+                        </div>
+                        <span class="shop-tab-num">
+                            <em id="jian">-</em>
+                            <span id="num">1</span>
+                        <em id="jia">+</em>
+                        </span>
+                    </li>
+                </ul>
+
+                <div class="js-wrap" id="total-money">
+                    <p>
+                        <font>￥<strong id="count-price">99</strong></font>
+                    </p>
+                    <a href="" id="buy-inner">
+                        <em>去结算</em>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 侧边栏 -->
     <div class="aside-list">
         <ul>
-            <li class="aside-icon" id="servers"><img src="/imgs/server_icon.png" alt=""></li>
-            <li id="shopCar" class="ac">
+            <li class="aside-icon" id="servers"><img src="/imgs/server_icon.png" alt="">
+                <span class="hover-text">
+                        
+                    我的服务
+            </span></li>
+            <li id="shopCar" class="ac hover-text">
                 <font class=car-text>购物车</font>
-                <span id="shop-num">(0)</span></li>
-            <li class="aside-icon"><img src="/imgs/user_icon.png" alt="">
+                <span id="shop-num">(<strong>0</strong>)</span>
+                <div id="user-login">
+                    <h2>登录
+                        <font id="close">X</font>
+                    </h2>
+                    <form action="">
+                        <dl>
+                            <dd><label>用户名<input type="text" id="username"></label></dd>
+                            <dd> <label>密码<input type="password" id="password"></label></dd>
+                            <dd><a href="/html/register.html">注册</a></dd>
+                            <dd><button type="button" id="btn-login">登录 </button></dd>
+                        </dl>
+                    </form>
+
+                </div>
+            </li>
+            <li class="aside-icon">
+                <img src="/imgs/user_icon.png" alt="">
                 <span class="hover-text">
                     
                     我的信息
                 </span>
             </li>
-            <li class="aside-icon"><img src="/imgs/money_icon.png" alt="">
+            <li class="aside-icon">
+                <img src="/imgs/money_icon.png" alt="">
                 <span class="hover-text">
                        
                         我的资产
                 </span></li>
-            <li class="aside-icon"><img src="/imgs/mail_icon.png" alt="">
+            <li class="aside-icon">
+                <img src="/imgs/mail_icon.png" alt="">
                 <span class="hover-text">
                         
                         我的消息
                 </span></li>
-            <li class="aside-icon"><img src="/imgs/edit_icon.png" alt="">
+            <li class="aside-icon">
+                <img src="/imgs/edit_icon.png" alt="">
                 <span class="hover-text">
                         
                         我的收藏
@@ -42,9 +103,6 @@
                         回到顶部
                 </span>
             </li>
-
-
         </ul>
     </div>
-
 </div>

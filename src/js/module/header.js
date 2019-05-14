@@ -1,10 +1,11 @@
 //基于jqurey，定义时引入jquery
-define(['jquery'], $ => {
+define(['jquery','cookie'], $ => {
     function Header() {
         this.headerContainer = $("header");
         this.load().then(() => {
             this.search();
             this.bindEvent();
+            this.isLogin();
 
         });
     }
@@ -47,20 +48,52 @@ define(['jquery'], $ => {
                 })
             })
         },
+        //给导航条加点击事件点击时导航条颜色变化
         bindEvent() {
-            // $(".nav").on("click", e => {
-
-            //         let target = e.targrt;
-            //         $(target).attr('class', "onc");
-            //     })
+        //     let lis =$(".nav ul>li").toArray();        
+        //    for(var i = 0; i < lis.length; i++) {
+		// 	  $(lis[i]).on("click",function () {
+		// 		for(var j = 0; j < lis.length; j++) {
+		// 			$(lis[j]).removeClass("onc");	
+		// 		}				
+        //         $(lis[i]).addClass("onc");
+        //         console.log($(lis[i]))
+		// 	})
             let nav = document.querySelector(".nav");
-            nav.onclick = e => {
-                var target = e.target;
-                target.classList.add("onc");
-                target.classList.remove("onc");
-            }
+            let lis = document.querySelectorAll("li");           
+           for(var i = 0; i < lis.length; i++) {
+			lis[i].onclick = function () {
+				for(var j = 0; j < lis.length; j++) {
+					lis[j].className = "";	
+				}				
+				this.className = "onc";	
+			}
+		}
 
+        },
+
+        isLogin(){
+            this.unLogin = $("#unLogin");
+            this.loginReady = $("#loginReady");
+            this.userspan=$("#welcome");
+            this.loginOut = $("#login-out");
+            let username = $.cookie("username");
+            if(username){
+                this.unLogin.hide();
+                this.loginReady.show();
+                this.userspan.html(username);
+            }
+            this.loginOut.on("click",()=>{
+               if(confirm("确定要退出吗？")){
+                    $.removeCookie("username",{path:"/"});
+                    this.unLogin.show();
+                    this.loginReady.hide();
+                }
+              
+            })
         }
+
+        
     })
 
     return new Header();

@@ -13,8 +13,6 @@
     <header></header>
     <aside></aside>
     <main>
-
-
         <div class="detaile-container">
             <!-- detail-wrap容器盒子 -->
             <div id="detaile-wrap"></div>
@@ -39,15 +37,28 @@
                     <div class="describe-conten">
                         <div class="pic-wrap">
                             <div class="pic">
-                                <img src="{{data.imgs[0]}}" alt="">
+                                <img class="zoom-image" src="{{data.imgs[0]}}" data-zoom-iamge="{{data.imgs[0]}}" alt="">
                             </div>
                             <div class="small-pic">
                                 <span class="move-btn" id="go-pre"></span>
                                 <span class="move-btn" id="go-next"></span>
-                                <div class="s-pics">
+                                <div class="s-pics" id="smalls">
                                     <ul>
-                                        <li><img src="{{data.imgs[1]}}" alt=""></li>
-                                        <li><img src="{{data.imgs[2]}}" alt=""></li>
+                                        <li>
+                                            <a href="javascript:;" data-image="{{data.imgs[0]}}" data-zoom-image="{{data.imgs[0]}}">
+                                                <img src="{{data.imgs[0]}}" alt="">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" data-image="{{data.imgs[1]}}" data-zoom-image="{{data.imgs[1]}}">
+                                                <img src="{{data.imgs[1]}}" alt="">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" data-image="{{data.imgs[2]}}" data-zoom-image="{{data.imgs[2]}}">
+                                                <img src="{{data.imgs[2]}}" alt="">
+                                            </a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -88,14 +99,14 @@
                                         <a id="plus" href="javascript:;">-</a>
                                         <a id="reduce" href="javascript:;">+</a>
                                     </dd>
-                                    <dd id="total-this">总计&nbsp;&nbsp;<span>45</span></dd>
+                                    <dd id="total-this">总计&nbsp;&nbsp;<span>{{data.price}}</span></dd>
                                 </dl>
                             </div>
                             <div id="buy-btn-wrap">
                                 <div id="buyNow">
                                     <a href="javascript:;"></a>
                                 </div>
-                                <div id="buyAddCar">
+                                <div id="buyAddCar" class="addCart" data-id="{{data.id}}">
                                     <a href="javascript:;"></a>
                                 </div>
                             </div>

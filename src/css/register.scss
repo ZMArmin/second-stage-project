@@ -76,14 +76,19 @@ main {
                         .security-dd {
                             line-height: 33px;
                             vertical-align: middle;
-                            img {
-                                width: 100px;
-                                height: 24px;
-                                margin-left: 60px;
+                            #sure-t{
+                                display: inline-block;
+                                img {
+                                    width: 100px;
+                                    height: 24px;
+                                    margin-left: 60px;
+                                }
                             }
+                           
                             input {
                                 width: 100px;
-                                margin-left: 130px;
+                                line-height: 26px;
+                                margin-left: 30px;
                             }
                         }
                     }

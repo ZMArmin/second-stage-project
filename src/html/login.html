@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>新鲜水果商城登录页面</title>
     <link rel="stylesheet" href="/css/login.css">
 </head>
 
@@ -33,14 +32,17 @@
                             <span class="sure-icon"></span>
                             <input type="text" id="sureWord" placeholder="验证码">
                         </div>
-
-                        <img src="/imgs/weixin.png" alt="">
+                        <p id="img-sure"></p>
+                        <script type="text/html" id="template-login">
+                            <img src="{{list.img}}" alt="">
+                        </script>
+                        
                     </div>
 
-                    <label for="#remember">十天免登陆： <input id="remember" type="checkbox"></label>
+                    <label>十天免登陆： <input id="remember" type="checkbox"></label>
 
 
-                    <button id="login-btn">登录</button>
+                    <button id="login-btn" type="button">登录</button>
 
 
                 </form>
@@ -54,7 +56,7 @@
         </div>
     </main>
     <footer id="footer"></footer>
-    <script src="/libs/requirejs/require.js" data-main="/js/login"></script>
+    <script src="/libs/requirejs/require.js" data-main="/js/login.js"></script>
 </body>
 
 </html>

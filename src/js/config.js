@@ -6,6 +6,20 @@ require.config({
         "footer": "js/module/footer",
         "aside": "js/module/aside",
         "url": "js/module/url",
-        "template": "libs/art-template/template-web"
+        "template": "libs/art-template/template-web",
+        "cookie": "libs/jquery-plugins/jquery.cookie",
+        "zoom": "libs/jquery-plugins/jquery.elevateZoom-3.0.8.min",
+        "bootstrap": "libs/bootstrap/js/bootstrap.min",
+        "addcart": "js/module/addCart"
+    },
+    //cookie,写垫片；
+    //垫片：给那些不满足AMD规范的插件，又要依赖于别的模块；如这个jquery.cookie，不满足AMD规范，又要依赖于jquery
+    shim: {
+        "cookie": {
+            deps: ['jquery']
+        },
+        "zoom": {
+            deps: ['jquery']
+        }
     }
 })

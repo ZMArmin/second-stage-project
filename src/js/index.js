@@ -9,6 +9,7 @@ require(['config'], () => {
             constructor() {
                     this.getType();
                     this.getTypeList();
+                    console.log(111);
 
                 }
                 //获取首页的数据

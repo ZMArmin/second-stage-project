@@ -117,12 +117,15 @@ main .login-container h5 span {
                     width: 110px;
                 }
             }
-            img {
-                width: 115px;
-                height: 28px;
-                background: #357821;
-                margin-left: 20px;
+            p{
+                display: inline-block;
+                img {
+                    width: 115px;
+                    height: 28px;
+                    margin-left: 20px;
+                }
             }
+            
         }
         label {
             padding-left: 10px;
