@@ -3,7 +3,7 @@ require(['config'], () => {
         class Detail {
             constructor() {
                     this.init();
-                    console.log(addcart);
+
                 }
                 //在地址栏中取到id值，再根据取到即用户点的产品的id，携带id请求详情数据；请求数据后渲染详情页
             init() {
