@@ -1,11 +1,12 @@
 //基于jqurey，定义时引入jquery
-define(['jquery','cookie'], $ => {
+define(['jquery', 'swiper', 'cookie'], ($, Swiper) => {
     function Header() {
         this.headerContainer = $("header");
         this.load().then(() => {
             this.search();
             this.bindEvent();
             this.isLogin();
+            this.banner();
 
         });
     }
@@ -50,50 +51,75 @@ define(['jquery','cookie'], $ => {
         },
         //给导航条加点击事件点击时导航条颜色变化
         bindEvent() {
-        //     let lis =$(".nav ul>li").toArray();        
-        //    for(var i = 0; i < lis.length; i++) {
-		// 	  $(lis[i]).on("click",function () {
-		// 		for(var j = 0; j < lis.length; j++) {
-		// 			$(lis[j]).removeClass("onc");	
-		// 		}				
-        //         $(lis[i]).addClass("onc");
-        //         console.log($(lis[i]))
-		// 	})
+            //     let lis =$(".nav ul>li").toArray();        
+            //    for(var i = 0; i < lis.length; i++) {
+            // 	  $(lis[i]).on("click",function () {
+            // 		for(var j = 0; j < lis.length; j++) {
+            // 			$(lis[j]).removeClass("onc");	
+            // 		}				
+            //         $(lis[i]).addClass("onc");
+            //         console.log($(lis[i]))
+            // 	})
             let nav = document.querySelector(".nav");
-            let lis = document.querySelectorAll("li");           
-           for(var i = 0; i < lis.length; i++) {
-			lis[i].onclick = function () {
-				for(var j = 0; j < lis.length; j++) {
-					lis[j].className = "";	
-				}				
-				this.className = "onc";	
-			}
-		}
+            let lis = document.querySelectorAll("li");
+            for (var i = 0; i < lis.length; i++) {
+                lis[i].onclick = function() {
+                    for (var j = 0; j < lis.length; j++) {
+                        lis[j].className = "";
+                    }
+                    this.className = "onc";
+                }
+            }
 
         },
-
-        isLogin(){
+        //判断是否登录，渲染头部的数据
+        isLogin() {
             this.unLogin = $("#unLogin");
             this.loginReady = $("#loginReady");
-            this.userspan=$("#welcome");
+            this.userspan = $("#welcome");
             this.loginOut = $("#login-out");
             let username = $.cookie("username");
-            if(username){
+            if (username) {
                 this.unLogin.hide();
                 this.loginReady.show();
                 this.userspan.html(username);
             }
-            this.loginOut.on("click",()=>{
-               if(confirm("确定要退出吗？")){
-                    $.removeCookie("username",{path:"/"});
+            this.loginOut.on("click", () => {
+                if (confirm("确定要退出吗？")) {
+                    $.removeCookie("username", { path: "/" });
                     this.unLogin.show();
                     this.loginReady.hide();
+                    //退出登录后，侧边栏的数据也需要重新渲染
+                    // aside.isloginEvent();
                 }
-              
+
+            })
+        },
+
+        //轮播图的方法
+        banner() {
+            var mySwiper = new Swiper('.swiper-container', {
+                autoplay: true,
+                direction: 'vertical',
+                loop: true,
+
+                // 如果需要分页器
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+
+                // 如果需要前进后退按钮
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                }
+
+
             })
         }
 
-        
+
     })
 
     return new Header();

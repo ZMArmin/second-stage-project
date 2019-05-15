@@ -10,7 +10,8 @@ require.config({
         "cookie": "libs/jquery-plugins/jquery.cookie",
         "zoom": "libs/jquery-plugins/jquery.elevateZoom-3.0.8.min",
         "bootstrap": "libs/bootstrap/js/bootstrap.min",
-        "addcart": "js/module/addCart"
+        "fly": "libs/jquery-plugins/jquery.fly",
+        "swiper": "libs/swiper/js/swiper"
     },
     //cookie,写垫片；
     //垫片：给那些不满足AMD规范的插件，又要依赖于别的模块；如这个jquery.cookie，不满足AMD规范，又要依赖于jquery
@@ -19,6 +20,9 @@ require.config({
             deps: ['jquery']
         },
         "zoom": {
+            deps: ['jquery']
+        },
+        "fly": {
             deps: ['jquery']
         }
     }

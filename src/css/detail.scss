@@ -22,6 +22,11 @@
                padding-left: 10px;
                line-height: 35px;
                margin-bottom: 20px;
+               &:after {
+                   content: "";
+                   display: block;
+                   clear: both;
+               }
                em {
                    font-style: normal;
                    color: #347B1B;
@@ -313,9 +318,11 @@
                            }
                            #buyNow {
                                background: url(/imgs/inner_nowBuy.png) no-repeat center center;
+                               cursor: pointer;
                            }
                            #buyAddCar {
                                background: url(/imgs/inner_addCat.png) no-repeat center center;
+                               cursor: pointer;
                            }
                        }
                    }

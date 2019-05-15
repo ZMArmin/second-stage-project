@@ -39,10 +39,10 @@ gulp.task('js', () => {
     // 所有js代码取出来，ES6转成ES5  babel
     // 压缩，再放到dist/js里
     gulp.src('src/js/**/*.js')
-        .pipe(babel({
-            presets: ['@babel/env']
-        }))
-        .pipe(uglify())
+        // .pipe(babel({
+        //     presets: ['@babel/env']
+        // }))
+        // .pipe(uglify())
         .pipe(gulp.dest('dist/js'))
         .pipe(connect.reload());
 })

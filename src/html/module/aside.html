@@ -7,28 +7,33 @@
             </h2>
             <!-- 侧边栏购物车 -->
             <div class="shop-scroll">
-                <ul>
-                    <li class="shop-tab-li">
+                <!-- 商品列表渲染框 -->
+                <ul id="shop-list"></ul>
+                <script type="text/html" id="cart-template">
+                    {{each list item}}
+                    <li class="shop-tab-li" id="{{item.id}}">
                         <span class="shop-tab-pic">
-                            <a href="javascript:;">
-                                <img src="/imgs/1.png" alt="">
-                            </a>
-                        </span>
+                                <a href="javascript:;">
+                                    <img src="{{item.imgs[0]}}" alt="">
+                                </a>
+                            </span>
                         <div class="shop-tab-title">
-                            <p class="title">油牛果</p>
-                            <span class="price">￥99</span>
+                            <p class="title">{{item.title}}</p>
+                            <span class="price">{{item.price*item.num}}</span>
                         </div>
                         <span class="shop-tab-num">
-                            <em id="jian">-</em>
-                            <span id="num">1</span>
-                        <em id="jia">+</em>
+                                <em class="jian">-</em>
+                                <span class="num">{{item.num}}</span>
+                        <em class="jia">+</em>
                         </span>
+                        <i class="del"></i>
                     </li>
-                </ul>
+                    {{/each}}
+                </script>
 
                 <div class="js-wrap" id="total-money">
                     <p>
-                        <font>￥<strong id="count-price">99</strong></font>
+                        <font>￥<strong id="count-price">0</strong></font>
                     </p>
                     <a href="" id="buy-inner">
                         <em>去结算</em>
@@ -48,7 +53,7 @@
             <li id="shopCar" class="ac hover-text">
                 <font class=car-text>购物车</font>
                 <span id="shop-num">(<strong>0</strong>)</span>
-                <div id="user-login">
+                <div id="user-login" class="hide">
                     <h2>登录
                         <font id="close">X</font>
                     </h2>

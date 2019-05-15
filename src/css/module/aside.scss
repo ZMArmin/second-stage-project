@@ -3,7 +3,7 @@ aside {
     height: 100%;
     right: -280px;
     top: 0;
-    // z-index: 100;
+    z-index: 100;
     .aside-container {
         height: 100%;
         .aside-list {
@@ -63,9 +63,6 @@ aside {
                         background: #fff;
                         border-width: 1px 0 1px 1px;
                         border-style: solid;
-                        .show {
-                            display: block;
-                        }
                         h2 {
                             text-align: left;
                             font-size: 16px;
@@ -184,7 +181,7 @@ aside {
                     overflow: hidden;
                     margin: 10px auto;
                     ul {
-                        height: 370px;
+                        height: 400px;
                         overflow-y: scroll;
                         overflow-x: hidden;
                         width: 297px;
@@ -193,6 +190,17 @@ aside {
                             line-height: normal;
                             text-align: left;
                             background: #0E7D04;
+                            position: relative;
+                            margin-top: 5px;
+                            i {
+                                position: absolute;
+                                right: 30px;
+                                bottom: 8px;
+                                cursor: pointer;
+                                background: url(/imgs/del_list.png);
+                                width: 15px;
+                                height: 18px;
+                            }
                             .shop-tab-pic {
                                 display: block;
                                 margin: 0 10px 0 5px;
@@ -228,7 +236,7 @@ aside {
                             .shop-tab-num {
                                 display: inline-block;
                                 height: 22px;
-                                margin-top: 10px;
+                                margin-top: 4px;
                                 em {
                                     display: block;
                                     width: 22px;
@@ -241,7 +249,7 @@ aside {
                                     font-style: normal;
                                     cursor: pointer;
                                 }
-                                #num {
+                                .num {
                                     float: left;
                                     min-width: 40px;
                                     text-align: center;
