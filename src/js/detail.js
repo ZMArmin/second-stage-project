@@ -16,12 +16,13 @@ require(['config'], () => {
                             var { data } = res.res_body;
                             this.render(data);
                         }
+
                         var price = data.price,
                             imgs = data.imgs,
                             title = data.title;
+                        //取出我需要的数据，与我们请求数据的这个id值一起再放进这个数据中，方便后期取数据加购物车操作这个id
                         data = { imgs, price, title, id }
                         this.data = data;
-                        //扩展运算符，把我们请求数据的这个id值再放进这个数据中，方便后期取数据加购物车操作这个id
                         this.addCart();
                     })
                 }
@@ -89,9 +90,9 @@ require(['config'], () => {
                             },
                             onEnd: function() {
                                 this.destroy();
-                                console.log($("#shop-num").offset().top);
                                 aside.shopCart();
                                 aside.calcCartNum();
+                                aside.calcCartPrice();
                             }
                         });
 

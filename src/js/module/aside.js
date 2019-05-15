@@ -7,6 +7,8 @@ define(['jquery', 'url', 'template', 'cookie'], ($, url, template) => {
             this.isloginEvent();
             this.shopCart();
             this.calcCartNum();
+            this.calcCartPrice();
+            this.goTop()
 
         });
     }
@@ -107,8 +109,7 @@ define(['jquery', 'url', 'template', 'cookie'], ($, url, template) => {
         //根据数据渲染购物车
         render(cart) {
             $("#shop-list").html(template("cart-template", { list: cart }));
-            let price = Number($("#shop-list").find('.price').html()).toFixed(2);
-            $("#shop-list").find('.price').html(price);
+
         },
 
         //购物车栏操作,增删改
@@ -117,13 +118,36 @@ define(['jquery', 'url', 'template', 'cookie'], ($, url, template) => {
                 var $target = $(event.target);
                 //找到操作的当前行
                 let li = $target.parent().parent();
+                let id = li.attr("id");
                 if ($target.is(".jia")) {
                     //事件源是加则调用加数据的方法
                     this.addShop(li);
-
+                    if (cart.some((shop, i) => {
+                            //some找到满足条件的就不再往下找了，所以index的值就等于满足条件的索引
+                            index = i;
+                            return shop.id == id;
+                        })) {
+                        //当前索引的数据的num值加等于这个number
+                        cart[index].num++;
+                        localStorage.setItem("cart", JSON.stringify(cart));
+                    }
+                    this.calcCartNum();
+                    this.calcCartPrice();
                 } else if ($target.is($(".jian"))) {
-                    //如果事件源是减，则每点击一次数据减一
+                    //点击减时，找
+                    if (cart.some((shop, i) => {
+                            //some找到满足条件的就不再往下找了，所以index的值就等于满足条件的索引
+                            index = i;
+                            return shop.id == id;
+                        })) {
+                        //当前索引的数据的num值加等于这个number
+                        cart[index].num--;
+                        if (cart[index].num < 1) cart[index].num = 1;
+                        localStorage.setItem("cart", JSON.stringify(cart));
+                    }
                     this.reduceShop(li);
+                    this.calcCartNum();
+                    this.calcCartPrice();
                 } else if ($target.is($("i"))) {
                     li = $target.parent();
                     this.delShop(li);
@@ -140,6 +164,7 @@ define(['jquery', 'url', 'template', 'cookie'], ($, url, template) => {
             number += 1;
             li.find(".num").html(number);
 
+
         },
         //减少购物车数量
         reduceShop(li) {
@@ -149,9 +174,9 @@ define(['jquery', 'url', 'template', 'cookie'], ($, url, template) => {
             number--;
             if (number < 1) number = 1;
             li.find(".num").html(number);
+
         },
 
-        //删除购物车
         //删除购物车
         delShop(li) {
             let cart = localStorage.getItem("cart");
@@ -167,8 +192,9 @@ define(['jquery', 'url', 'template', 'cookie'], ($, url, template) => {
             }
 
             this.calcCartNum();
+            this.calcCartPrice();
         },
-
+        //计算购物车每条数据的数量个数，即购买商品的数量
         calcCartNum() {
             let cart = localStorage.getItem("cart");
             let num = 0
@@ -186,18 +212,31 @@ define(['jquery', 'url', 'template', 'cookie'], ($, url, template) => {
 
         //计算购物车总的价格
         calcCartPrice() {
+            let cart = localStorage.getItem("cart");
             let totalPrice = Number($("#count-price").html());
             if (cart) {
                 cart = JSON.parse(cart);
                 totalPrice = cart.reduce((price, shop) => {
-                    price += Math.round(shop.num * shop.price);
+                    price += shop.num * shop.price;
+                    // price = $(price).toFixed(2);
                     return price;
                 }, 0)
-                $("#count-price").html(totalPrice);
+
+                $("#count-price").html(totalPrice.toFixed(2));
             } else {
                 $("#count-price").html(totalPrice);
             }
+        },
+
+        //回到顶部
+        goTop() {
+            $("#return-top").click(function() {
+                $("html,body").animate({
+                    scrollTop: 0
+                }, 500);
+            });
         }
+
 
 
 
