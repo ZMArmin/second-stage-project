@@ -4,8 +4,7 @@
 	include("../config.php");
 	$username = $_POST['username'];
 	$password = $_POST['password'];
-	$email= $_POST['email'];
-	$sql = "insert into user (username,password,email) values ('$username','$password','$email')";
+	$sql = "insert into user (username,password) values ('$username','$password')";
 	$res= mysql_query($sql);
 	if($res){
 		echo json_encode(array(
