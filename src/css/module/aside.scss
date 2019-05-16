@@ -3,7 +3,7 @@ aside {
     height: 100%;
     right: -280px;
     top: 0;
-    z-index: 100;
+    z-index: 10000;
     .aside-container {
         height: 100%;
         .aside-list {
@@ -181,7 +181,7 @@ aside {
                     overflow: hidden;
                     margin: 10px auto;
                     ul {
-                        height: 400px;
+                        height: 450px;
                         overflow-y: scroll;
                         overflow-x: hidden;
                         width: 297px;

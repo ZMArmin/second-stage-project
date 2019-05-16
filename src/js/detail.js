@@ -1,5 +1,5 @@
 require(['config'], () => {
-    require(['url', 'template', 'aside', 'fly', 'header', 'zoom', 'footer'], (url, template, aside, fly) => {
+    require(['url', 'template', 'fly', 'header', 'aside', 'zoom', 'footer'], (url, template, header, aside, fly) => {
         class Detail {
             constructor() {
                     this.init();
@@ -127,8 +127,6 @@ require(['config'], () => {
                         localStorage.setItem("cart", JSON.stringify(cart));
 
                     }
-
-
                 })
             }
 

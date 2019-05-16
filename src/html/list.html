@@ -7,13 +7,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>新鲜水果商城-商品列表页</title>
     <link rel="stylesheet" href="/libs/swiper/css/swiper.css">
+    <link rel="stylesheet" href="/libs/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/list.css">
 </head>
 
 <body>
-    <header></header>
     <aside></aside>
+    <header></header>
     <main>
+        <!-- <div class="buy">加入购物车</div> -->
+        <div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                    加入购物车成功
+                </div>
+            </div>
+        </div>
         <div class="list-container">
             <div id="list-text">
                 <h3>产品展示</h3>
@@ -36,7 +45,7 @@
                                 </div>
                                 <div class="pic-attr">
                                     <span class="pic-price">￥{{item.price}}</span>
-                                    <em class="list-shopcar addCart" data-id="{{item.id}}"></em>
+                                    <em class="list-shopcar addCart" data-toggle="modal" data-target="#myModal" data-id="{{item.id}}"></em>
                                     <p class="pic-title"><a href="/html/detail.html?id={{item.id}}">{{item.title}}</a></p>
                                 </div>
                             </li>

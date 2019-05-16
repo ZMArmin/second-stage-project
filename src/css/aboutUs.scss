@@ -1,0 +1,81 @@
+@import "module/base.scss";
+@import "module/aside.scss";
+@import "module/header.scss";
+@import "module/footer.scss";
+main {
+    width: 100%;
+    display: flex;
+    .main-wrap {
+        width: 100%;
+        position: relative;
+        margin-top: 15px;
+        margin-bottom: 50px;
+        background: #ffba52;
+        .main {
+            margin: 0 auto;
+            .content-title {
+                padding: 50px 0;
+                border-bottom: 1px solid #fff;
+                h2 {
+                    font-size: 24px;
+                    font-weight: normal;
+                    color: #fff;
+                    height: 50px;
+                    width: 200px;
+                    margin: 0 auto;
+                    border: 2px solid #fff;
+                    text-align: center;
+                    line-height: 50px;
+                }
+                p {
+                    width: 100%;
+                    text-align: center;
+                    font-size: 16px;
+                    color: #fff;
+                    line-height: 24px;
+                    margin-top: 20px;
+                }
+            }
+            .content {
+                width: 1200px;
+                height: 320px;
+                margin: 50px auto;
+                .cont-left {
+                    width: 910px;
+                    height: 320px;
+                    float: left;
+                    .classes {
+                        width: 595px;
+                        height: 320px;
+                        float: left;
+                        li {
+                            font-size: 15px;
+                            line-height: 30px;
+                            color: #fff;
+                            text-indent: 2em;
+                        }
+                    }
+                    .pic {
+                        width: 295px;
+                        height: 320px;
+                        float: right;
+                    }
+                }
+                .cont-right {
+                    float: right;
+                    width: 280px;
+                    height: 320px;
+                    position: relative;
+                    .img {
+                        width: 280px;
+                        height: 155px;
+                        position: absolute;
+                    }
+                    .two {
+                        bottom: 0px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -9,7 +9,6 @@ require(['config'], () => {
             constructor() {
                     this.getType();
                     this.getTypeList();
-                    console.log(111);
 
                 }
                 //获取首页的数据
@@ -31,8 +30,8 @@ require(['config'], () => {
                 $.get(url.rapBaseUrl + 'index/text/type', data => {
                     //console.log(data);
                     if (data.res_code === 1) {
+                        //请求数据后渲染页面
                         this.renderTypeList(data.res_body.list);
-                        console.log(data.res_body.list);
                     }
                 })
             }

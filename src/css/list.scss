@@ -5,6 +5,12 @@
     main {
         width: 100%;
         position: relative;
+        .modal-content {
+            text-align: center !important;
+            width: 200px !important;
+            height: 60px !important;
+            line-height: 60px !important;
+        }
         &:after {
             content: "";
             display: block;

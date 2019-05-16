@@ -1,5 +1,5 @@
 //基于jqurey，定义时引入jquery
-define(['jquery', 'swiper', 'cookie'], ($, Swiper) => {
+define(['jquery', 'swiper', 'aside', 'cookie'], ($, Swiper, aside) => {
     function Header() {
         this.headerContainer = $("header");
         this.load().then(() => {
@@ -51,26 +51,26 @@ define(['jquery', 'swiper', 'cookie'], ($, Swiper) => {
         },
         //给导航条加点击事件点击时导航条颜色变化
         bindEvent() {
-            //     let lis =$(".nav ul>li").toArray();        
-            //    for(var i = 0; i < lis.length; i++) {
-            // 	  $(lis[i]).on("click",function () {
-            // 		for(var j = 0; j < lis.length; j++) {
-            // 			$(lis[j]).removeClass("onc");	
-            // 		}				
-            //         $(lis[i]).addClass("onc");
-            //         console.log($(lis[i]))
-            // 	})
-            let nav = document.querySelector(".nav");
-            let lis = document.querySelectorAll("li");
-            for (var i = 0; i < lis.length; i++) {
-                lis[i].onclick = function() {
-                    for (var j = 0; j < lis.length; j++) {
-                        lis[j].className = "";
+            // let nav = document.querySelector(".nav");
+            // let lis = document.querySelectorAll("li");
+            // for (var i = 0; i < lis.length; i++) {
+            //     lis[i].onclick = function() {
+            //         for (var j = 0; j < lis.length; j++) {
+            //             lis[j].className = "";
+            //         }
+            //         this.className = "onc";
+            //     }
+            // }
+            //点击导航条给导航条增加样式
+            $(document).ready(function() {
+                $(".nav a").each(function() {
+                    $this = $(this);
+                    $this.attr("text-decoration", "none");
+                    if ($this[0].href == String(window.location)) {
+                        $this.addClass("onc");
                     }
-                    this.className = "onc";
-                }
-            }
-
+                });
+            });
         },
         //判断是否登录，渲染头部的数据
         isLogin() {
@@ -89,10 +89,10 @@ define(['jquery', 'swiper', 'cookie'], ($, Swiper) => {
                     $.removeCookie("username", { path: "/" });
                     this.unLogin.show();
                     this.loginReady.hide();
-                    //退出登录后，侧边栏的数据也需要重新渲染
-                    // aside.isloginEvent();
+                    //退出登录后， 侧边栏的数据也需要重新渲染
+                    aside.isloginEvent();
+                    $("aside").css("right", -280);
                 }
-
             })
         },
 

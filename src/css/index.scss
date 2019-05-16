@@ -33,6 +33,15 @@ main {
                     img {
                         width: 100%;
                         height: 100%;
+                        animation: rg 0.2s ease-out;
+                    }
+                    @keyframes rg {
+                        from {
+                            margin-left: -236px;
+                        }
+                        to {
+                            margin-left: 0px;
+                        }
                     }
                 }
             }
@@ -119,13 +128,22 @@ main {
                             cursor: pointer;
                         }
                     }
-                    .image {
-                        display: inline-block;
-                        width: 234px;
-                        height: 211px;
-                        img {
-                            width: 100%;
-                            height: 100%;
+                }
+                .image {
+                    display: inline-block;
+                    width: 234px;
+                    height: 211px;
+                    animation: run 0.3s ease-out;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                    @keyframes run {
+                        from {
+                            margin-left: -1200px;
+                        }
+                        to {
+                            margin-left: 0px;
                         }
                     }
                 }
@@ -177,13 +195,117 @@ main {
                     font-family: 微软雅黑;
                     font-size: 15px;
                     line-height: 66px;
+                    position: relative;
                     span {
-                        float: right;
+                        position: absolute;
                         color: #868686;
+                        right: 35px;
                     }
                     a {
+                        display: inline-block;
+                        width: 90%;
                         color: #373737;
+                        text-overflow: ellipsis;
                     }
+                }
+            }
+        }
+    }
+    .promise-wrap {
+        width: 100%;
+        position: relative;
+        margin-top: 20px;
+        .promises {
+            width: 1200px;
+            margin: 0 auto;
+            height: 80px;
+            li {
+                width: 25%;
+                float: left;
+                .inner {
+                    position: relative;
+                    a {
+                        display: inline-block;
+                        width: 55px;
+                        position: absolute;
+                        height: 55px;
+                        left: 35px;
+                        top: 13px;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    span {
+                        display: inline-block;
+                        height: 55px;
+                        padding-left: 124px;
+                        line-height: 87px;
+                        font-size: 22px;
+                        color: #404040;
+                        font-family: 微软雅黑;
+                    }
+                }
+            }
+        }
+    }
+    .links-wrap {
+        width: 1200px;
+        margin: 50px auto;
+        height: 200px;
+        position: relative;
+        .codes {
+            width: 470px;
+            height: 200px;
+            float: left;
+            position: relative;
+            .img {
+                width: 120px;
+                height: 120px;
+            }
+            .code1 {
+                position: absolute;
+                top: 20px;
+                left: 0;
+            }
+            .code2 {
+                position: absolute;
+                top: 20px;
+                right: 0;
+            }
+        }
+        dl {
+            float: left;
+            width: 202px;
+            height: 200px;
+            margin-left: 35px;
+            dt {
+                font-size: 18px;
+                color: #3f3f3f;
+                line-height: 36px;
+                margin-bottom: 5px;
+                span {
+                    display: inline-block;
+                    width: 40px;
+                    height: 36px;
+                    vertical-align: -8px;
+                }
+                .news {
+                    background: url(/imgs/links3.jpg) no-repeat 0 0;
+                }
+                .aboutUs {
+                    background: url(/imgs/links1.jpg) no-repeat 0 0;
+                }
+                .showList {
+                    background: url(/imgs/links2.jpg) no-repeat 0 0;
+                }
+            }
+            dd {
+                font-size: 14px;
+                line-height: 28px;
+                padding-left: 40px;
+                a {
+                    color: #747474;
                 }
             }
         }
