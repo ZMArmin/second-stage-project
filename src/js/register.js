@@ -65,8 +65,10 @@ require(['config'], () => {
                                     if (data.res_code === 1) {
                                         alert("注册成功，即将跳转登录页面")
                                         location.href = 'login.html';
+                                    } else if (data.res_code === 3) {
+                                        alert("用户名已存在，请重新输入新的用户名")
                                     } else {
-                                        alert("注册失败，请您再次注册")
+                                        alert("网络错误，注册失败，请重试")
                                     }
                                 }
                             })

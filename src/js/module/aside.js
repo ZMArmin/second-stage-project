@@ -224,10 +224,6 @@ define(['jquery', 'url', 'template', 'cookie'], ($, url, template) => {
                 }, 500);
             });
         }
-
-
-
-
     })
     return new Aside();
 });

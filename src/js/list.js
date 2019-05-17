@@ -3,7 +3,7 @@ require(['config'], () => {
         class List {
             constructor() {
                 this.getListData();
-                header.init();
+
 
             }
 
@@ -11,14 +11,8 @@ require(['config'], () => {
             getListData() {
                 //发送ajax发送请求
                 //$.ajax最底层的封装，配置项多，对象的方式传递数据
-
                 $.ajax({
                     // url：url.rapBaseUrl+"/list/get",
-                    // //发送请求的时候携带的参数
-                    // data:{},
-                    // //传输数据的方式
-                    // type:"get",
-                    // dataType:"jason",
                     // //成功时的回调函数
                     // success:function(data){ console.log(data);},
                     // complete:function(){}//无论成功与否都会执行的函数
@@ -69,7 +63,7 @@ require(['config'], () => {
                         $('#myModal').modal('show');
                         setTimeout(function() {
                             $("#myModal").modal("hide")
-                        }, 400);
+                        }, 500);
                     })
                 })
             }
