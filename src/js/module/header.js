@@ -1,5 +1,5 @@
 //基于jqurey，定义时引入jquery
-define(['jquery', 'swiper', 'aside', 'cookie'], ($, Swiper, aside) => {
+define(['jquery', 'swiper', 'cookie'], ($, Swiper) => {
     function Header() {
         this.headerContainer = $("header");
         this.load().then(() => {
@@ -14,7 +14,6 @@ define(['jquery', 'swiper', 'aside', 'cookie'], ($, Swiper, aside) => {
     $.extend(Header.prototype, {
         load() {
             //加载header的html加载到页面
-
             return new Promise(resolve => {
                 this.headerContainer.load('/html/module/header.html', () => {
                     resolve();
@@ -90,7 +89,8 @@ define(['jquery', 'swiper', 'aside', 'cookie'], ($, Swiper, aside) => {
                     this.unLogin.show();
                     this.loginReady.hide();
                     //退出登录后， 侧边栏的数据也需要重新渲染
-                    aside.isloginEvent();
+                    // aside.isloginEvent();
+                    $("#user-login").show();
                     $("aside").css("right", -280);
                 }
             })
