@@ -1,5 +1,5 @@
 //基于jqurey，定义时引入jquery
-define(['jquery', 'swiper', 'cookie'], ($, Swiper) => {
+define(['jquery', 'swiper', 'aside', 'cookie'], ($, Swiper, aside) => {
     function Header() {
         this.headerContainer = $("header");
         this.load().then(() => {
@@ -89,9 +89,19 @@ define(['jquery', 'swiper', 'cookie'], ($, Swiper) => {
                     this.unLogin.show();
                     this.loginReady.hide();
                     //退出登录后， 侧边栏的数据也需要重新渲染
-                    // aside.isloginEvent();
-                    $("#user-login").show();
-                    $("aside").css("right", -280);
+                    aside.isloginEvent();
+                    let username = $.cookie("username");
+                    $("#shopCar").on("click", () => {
+                        if (username) {
+                            $("aside").css("right", 0);
+                            $("#user-login").hide();
+
+                        } else {
+                            $("#user-login").show();
+                            $("aside").css("right", -280);
+                        }
+                    })
+
                 }
             })
         },

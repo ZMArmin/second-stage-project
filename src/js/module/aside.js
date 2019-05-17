@@ -65,7 +65,7 @@ define(['jquery', 'url', 'template', 'cookie'], ($, url, template) => {
                     type: "post",
                     success: data => {
                         if (data.res_code === 1) {
-                            $.cookie("username", username, {});
+                            $.cookie("username", username, { path: "/" });
                             alert("登录成功");
                             //登录成功后将登录框隐藏，并且重判断是否登录渲染侧边栏的数据
                             $("#user-login").hide();
@@ -92,7 +92,7 @@ define(['jquery', 'url', 'template', 'cookie'], ($, url, template) => {
                 this.render(cart);
                 this.cartBindEvents(cart);
             } else {
-                $(".shop-scroll").html("<h1>购物车还没有商品，快去选购吧</h1>")
+                $(".shop-scroll").html("<h1>购物车为空，快去选购吧</h1>");
             }
         },
 

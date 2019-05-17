@@ -1,5 +1,5 @@
 require(['config'], () => {
-    require(['url', 'template', 'fly', 'header', 'aside', 'zoom', 'footer'], (url, template, header, aside, fly) => {
+    require(['url', 'template', 'fly', 'header', 'aside', 'zoom', 'footer'], (url, template, fly, header, aside, ) => {
         class Detail {
             constructor() {
                     this.init();
