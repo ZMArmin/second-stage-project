@@ -57,16 +57,16 @@ define(['jquery', 'swiper', 'aside', 'cookie'], ($, Swiper, aside) => {
             //         for (var j = 0; j < lis.length; j++) {
             //             lis[j].className = "";
             //         }
-            //         this.className = "onc";
+            //         this.className = "active";
             //     }
             // }
             //点击导航条给导航条增加样式
             $(document).ready(function() {
-                $(".nav a").each(function() {
-                    $this = $(this);
-                    $this.attr("text-decoration", "none");
-                    if ($this[0].href == String(window.location)) {
-                        $this.addClass("onc");
+                $(".nav li a").each(function() {
+                    var t = $(this);
+                    // $this.attr("text-decoration", "none");
+                    if (t[0].href == String(window.location)) {
+                        t.addClass("active");
                     }
                 });
             });

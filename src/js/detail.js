@@ -40,8 +40,8 @@ require(['config'], () => {
                     galleryActiveClass: 'active',
                     borderSize: '1',
                     borderColor: '#888',
-                    zoomWindowHeight: '200',
-                    zoomWindowWidth: '200',
+                    // zoomWindowHeight: '200',
+                    // zoomWindowWidth: '200',
 
                 });
             }
